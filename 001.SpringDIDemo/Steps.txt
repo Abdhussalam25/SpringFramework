@@ -1,0 +1,90 @@
+1)Create maven project ->archtype->quickstart1.1
+2)add spring related dependencies
+
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-core</artifactId>
+	    <version>5.3.0</version>
+	</dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-context</artifactId>
+	    <version>5.3.0</version>
+	</dependency>
+	
+3)check dependencies --sping core , spring context,spring aop, 
+spring beans,spring expression,spring jcl
+
+4) Create bean;
+com.training.bean.Hello
+5)how this bean will be available for this application
+
+5)---> Need one xml to configure.
+   configure Hello bean with the help of xml file
+   
+   xml detail
+   id is something called object name
+   
+6)calling bean from main method for performing actions
+
+calling application context... or brean factory
+
+application context is beanfactory++
+
+Application context is for handling all the beans present in the program
+
+-----------===========
+Create a bean called 
+Calculator having method 
+add() and substract()
+
+1)Create new project 002.SpringCalculator in maven
+2)Add Spring dependencies
+3)Create calculator brean with methods
+4)configure bean sml
+5)use application context to use this bean
+
+NOTE this is the using of Application Context 
+but not Dependency Injection
+
+How to put dependency as collection
+
+Types of  dependency injection
+
+Constructor injection
+Setter Injection
+
+by default Setter injection
+
+wherever some beans must need to some concept there we can use constructor injection
+
+Autowiring   is done using xml or by annotation
+
+autowire modes
+1)Autowirng  no:-=->default autowiring mode
+
+
+byname: property name and 
+
+
+How spring is working?
+
+diffrent scope of bean?
+
+what is stateful? and stateless bean??
+
+BeanFactory
+Different Design patterns is important
+
+
+
+
+
+ 
+
+
+
+   
+     

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- Calling Setter injection -->
+<bean id="helloWorld" class="com.training.bean.HelloWorld">
+<property name="message1" value="Hello World"/>
+<property name="message2" value="World is a wonderful place to live"/>
+</bean>
+
+<bean id="helloIndia" class="com.training.bean.HelloIndia" parent="helloWorld">
+<property name="message1" value="Hello India"/>
+<!-- <property name="message2" value="India is the best place for live"/> -->
+<property name="message3" value="India is the richest cultured"/>
+</bean>
+
+
+
+</beans>

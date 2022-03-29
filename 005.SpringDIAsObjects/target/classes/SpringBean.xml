@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--  -->
+<bean id="triangle1" class="com.training.bean.Triangle">
+<property name="pointA"  ref="pointAbean"/>
+<property name="pointB"  ref="pointBbean"/>
+<property name="pointC"  ref="pointCbean"/>
+</bean>
+
+<bean id="pointAbean" class="com.training.bean.TrianglePoints">
+<property name="xPoint"  value="45"/>
+<property name="yPoint"  value="48"/>
+</bean>
+
+<bean id="pointBbean" class="com.training.bean.TrianglePoints">
+<property name="xPoint"  value="23"/>
+<property name="yPoint"  value="28"/>
+</bean>
+
+<bean id="pointCbean" class="com.training.bean.TrianglePoints">
+<property name="xPoint"  value="55"/>
+<property name="yPoint"  value="58"/>
+</bean>
+
+
+
+</beans>

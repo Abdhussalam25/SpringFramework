@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- Calling Setter injection -->
+<bean id="triangle" class="com.training.bean.Triangle">
+<property name="points">
+	<list>
+		<ref bean="pointA"/>
+	</list>
+</property>
+</bean>
+
+<bean id="triangle1" class="com.training.bean.Triangle" parent="triangle">
+<property name="points">
+	<list merge="true">
+	<ref bean="pointB"/>
+	<ref bean="pointC"/>
+	</list>
+</property>
+</bean>
+
+
+<!-- Calling Setter injection -->
+<bean id="pointA" class="com.training.bean.TrianglePoints">
+<property name="xPoint" value="78"/>
+<property name="yPoint" value="45"/>
+</bean>
+
+<!-- Calling Setter injection -->
+<bean id="pointB" class="com.training.bean.TrianglePoints">
+<property name="xPoint" value="45"/>
+<property name="yPoint" value="78"/>
+</bean>
+
+
+<!-- Calling Setter injection -->
+<bean id="pointC" class="com.training.bean.TrianglePoints">
+<property name="xPoint" value="45"/>
+<property name="yPoint" value="48"/>
+</bean>
+
+
+</beans>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:webflow-config="http://www.springframework.org/schema/webflow-config"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd 
+       http://www.springframework.org/schema/security 
+       http://www.springframework.org/schema/security/spring-security.xsd 
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/webflow-config
+        http://www.springframework.org/schema/webflow-config/spring-webflow-config.xsd">
+
+	<context:component-scan base-package="com.niit.controller" />
+	<context:component-scan base-package="com.niit.model" />
+	<context:component-scan base-package="com.niit.dao" />
+	<context:component-scan base-package="com.niit.service" />
+	<mvc:annotation-driven />
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.h2.Driver" />
+		<property name="url" value="jdbc:h2:tcp://localhost/~/Bike-EShop" />
+		<property name="username" value="sa" />
+		<property name="password" value="" />
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+			</props>
+		</property>
+		<property name="annotatedClasses"><!-- Entities -->
+			<list>
+				<value>com.niit.model.Product</value>
+				<value>com.niit.model.Category</value>
+				<value>com.niit.model.Users</value>
+				<value>com.niit.model.Customer</value>
+				<value>com.niit.model.Authorities</value>
+			    <value>com.niit.model.ShippingAddress</value>
+			    <value>com.niit.model.BillingAddress</value>
+			    <value>com.niit.model.Cart</value>
+			    <value>com.niit.model.CartItem</value>
+			    <value>com.niit.model.CustomerOrder</value>
+				
+			</list>
+		</property>
+
+	</bean>
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+		
+</beans>

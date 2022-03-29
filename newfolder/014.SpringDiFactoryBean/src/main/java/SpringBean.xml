@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- Calling Setter injection -->
+<bean id="developer" class="com.training.bean.EmployeeFactoryBean">
+<property name="designation" value="Developer"/>
+</bean>
+
+<!-- Calling Setter injection -->
+<bean id="manager" class="com.training.bean.EmployeeFactoryBean">
+<property name="designation" value="Manager"/>
+</bean>
+
+<!-- Calling Setter injection -->
+<bean id="teamLead" class="com.training.bean.EmployeeFactoryBean">
+<property name="designation" value="TeamLead"/>
+</bean>
+
+</beans>

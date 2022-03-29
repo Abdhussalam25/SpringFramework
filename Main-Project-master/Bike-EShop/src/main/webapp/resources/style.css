@@ -1,0 +1,86 @@
+*{margin: 0px;padding:0px;}
+#hea{
+background-color:aqua;
+margin:0px; !important;
+height:20%;
+}
+.tableStyle{
+	margin:20px;
+}
+
+.jumbotron{
+	margin-bottom:0px; !important;
+	background-color:aqua;
+	height:20%;
+	}
+#navmar{margin: 0px 0px 0px 0px; !important;
+padding:0px;}
+.CustomDiv{
+background-color:red;
+}
+#Login{
+	text-align:right;
+
+}
+.navbar{
+  margin:0px;
+  
+}
+.nav {
+  float:right!important;
+  margin:0px;
+}
+header.carousel {
+	margin-top:0px;
+    height: 50%;
+}
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    padding-left: 0;
+    margin-left: -30%;
+    text-align: center;
+    list-style: none;
+    cursor:pointer;
+    
+    
+}
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 300px 
+    
+}
+ .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 40%;
+      margin: auto;
+      background-color:black;
+  }
+  .glyphicon
+  {
+        font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+  }
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+    right: 50%;
+    margin-right: -10px;
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    margin-top: 0	px;
+}
+
+
+
+

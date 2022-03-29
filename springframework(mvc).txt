@@ -1,0 +1,55 @@
+
+From Browser --- if we type url on brower
+
+browser  creates a get request along with headers to server
+
+server response using response with headers
+
+
+1)adny servlet has to extend HttpServlet
+
+2)@WebServlet(urlPatterns = "login.do")
+
+input to servlet is request 
+
+output---to servlet is response
+
+1)create a java class extend HttpServlet
+2)@WebServlet(urlPatterns="/login.do")
+3)override doGet(HttpRServletRequest request,
+ HttpServletResponse response) throws IOException, SQLException
+4)PrintWriter out = response.getWriter();
+
+
+
+index.jsp ---> call login page--->login.jsp
+
+login.jsp--> userId , password, submit
+
+success.jsp
+
+-->Dispatcher servlet--> Frontend controller
+-->Dispathcer servlet has --> url resolver 
+note each and every url request comming to dispatcher servlet
+then url resolver then response started.
+
+---DS  --to second level controller ie controller 
+controller response moving to DS and then to view resolver
+then again DS after that DS giving the response to Browser
+
+url resolver ---> gives the idea to DS of which controller
+ hasto be choosen to resolve this url now again DS contacting 
+to Controller -- then 
+
+bean should have 
+  member variable
+  constructor
+  parameterized constructor
+  getters and setters
+  to string 
+  equals method 
+  hascode method also
+
+bean also can contain some business logic for validating
+
+spring boot web dynamic login 

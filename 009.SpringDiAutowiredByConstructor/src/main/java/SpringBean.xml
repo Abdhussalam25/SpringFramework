@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- Calling byType autowire injection -->
+<bean id="employee" class="com.training.bean.Employee" autowire="constructor">
+	<property name="empId" value="111"/>
+	<property name="empName" value="Sricharan"/>
+</bean>
+
+<!-- Calling Setter injection -->
+<bean id="department" class="com.training.bean.Department">
+<property name="deptName" value="production"/>
+<property name="deptLocation" value="Delhi"/>
+</bean>
+
+</beans>

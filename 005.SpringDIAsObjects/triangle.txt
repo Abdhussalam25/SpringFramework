@@ -1,0 +1,6 @@
+creating triangle
+
+we need 3 triangle points 
+
+each point needs x and y points
+

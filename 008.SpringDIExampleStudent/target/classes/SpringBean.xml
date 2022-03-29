@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--  -->
+<bean id="student" class="com.training.bean.Student"  autowire="byName">
+<property name="rollNumber"  value="101"/>
+<property name="name"  value="san"/>
+<property name="stream"  ref="stream"/>
+</bean>
+<bean id="student1" class="com.training.bean.Student"	autowire="byName" >
+<property name="rollNumber"  value="101"/>
+<property name="name"  value="salam"/>
+<property name="stream"  ref="stream1"/>
+</bean>
+
+
+<bean id="stream" class="com.training.bean.Stream">
+<property name="streamType"  value="science"/>
+<property name="sub1"  value="Physics"/>
+<property name="sub2"  value="Chemistry"/>
+<property name="sub3"  value="Maths"/>
+</bean>
+
+<bean id="stream1" class="com.training.bean.Stream">
+<property name="streamType"  value="Arts"/>
+<property name="sub1"  value="History"/>
+<property name="sub2"  value="Geography"/>
+<property name="sub3"  value="GeneralKnowledge"/>
+</bean>
+
+
+
+
+
+</beans>
